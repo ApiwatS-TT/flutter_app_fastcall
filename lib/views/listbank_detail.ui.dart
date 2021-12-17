@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_fastcall/models/foodlist.dart';
+//import 'package:flutter_app_fastcall/models/banklist.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_app_fastcall/models/banklist.dart';
 
-class ListfoodDetailUI extends StatefulWidget {
+class ListbankDetailUI extends StatefulWidget {
   @override
   String name = '';
   String website = '';
@@ -12,7 +13,7 @@ class ListfoodDetailUI extends StatefulWidget {
   String image = '';
   String pikat = '';
 
-  ListfoodDetailUI({
+  ListbankDetailUI({
     Key? key,
     required this.name,
     required this.website,
@@ -22,10 +23,10 @@ class ListfoodDetailUI extends StatefulWidget {
     required this.pikat,
   }) : super(key: key);
 
-  _ListfoodDetailUIState createState() => _ListfoodDetailUIState();
+  _ListbankDetailUIState createState() => _ListbankDetailUIState();
 }
 
-class _ListfoodDetailUIState extends State<ListfoodDetailUI> {
+class _ListbankDetailUIState extends State<ListbankDetailUI> {
   Future<void> _launchInBrowser(String url) async {
     if (await canLaunch(url)) {
       await launch(
@@ -53,7 +54,7 @@ class _ListfoodDetailUIState extends State<ListfoodDetailUI> {
       backgroundColor: Colors.lightBlue[50],
       appBar: AppBar(
         title: Text(
-          'Food Detail รายละเอียดร้าน',
+          'รายละเอียด',
         ),
         centerTitle: true,
         backgroundColor: Colors.lightBlue[100],
